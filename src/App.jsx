@@ -6,14 +6,16 @@ import React from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer"
+import { Outlet } from "react-router";
 
 
 const App = () => {
   return (
     <div>
       <Header/>
-      <Body/>
-      <Footer/>
+      <Outlet/> 
+     {/* Outlet can take three possible values <Body/>, <About/>, <ContactUs/> */}
+      {/* <Footer/> */}
       {/* <Header></Header>
       {Header()} */}
     </div>
@@ -23,32 +25,3 @@ const App = () => {
 
 
 export default App
-{/* <header></header> This is done
-<body>
-  <Carousel/>
-  <Cardcontainer>
-    <SearchBar/>
-    <Filter/>
-    <RestaurantCard/>
-    <RestaurantCard/>
-    <RestaurantCard/>
-    <RestaurantCard/>
-    <RestaurantCard/>
-  </Cardcontainer>
-</body>
-<footer></footer> */} 
-
-{/* <Menu>
-  <RestaurantInfo/>
-  <MenuContainer>
-    <DishInfo/>
-    <DishInfo/>
-    <DishInfo/>
-    <DishInfo/>
-    <DishInfo/>
-    <DishInfo/>
-    <DishInfo/>
-  </MenuContainer>
-</Menu> */}
-
-{/* <Cart/> */}

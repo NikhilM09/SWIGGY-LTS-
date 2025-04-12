@@ -1,12 +1,13 @@
 import React from 'react'
 import { IMG_URL } from '../constants/config'
+import { Link } from 'react-router'
 
-const RestaurantCard = ({name, avgRating, sla, cuisines, locality, cloudinaryImageId
+const RestaurantCard = ({id,name, avgRating, sla, cuisines, locality, cloudinaryImageId
 }) => {
   // console.log("props", props)
   // const {name, rating, deliveryTime, cuisines, location} = props
   return (
-    <div className="w-full md:max-w-[250px] max-w-[300px]">
+    <Link to={`/menu/${name}/${id}`} className="w-full md:max-w-[250px] shadow-md rounded-[15px] max-w-[300px]">
         <div className="w-full h-[150px]">
             <img className="w-full h-full object-cover rounded-[15px] " src={IMG_URL+cloudinaryImageId}/>
         </div>
@@ -19,7 +20,7 @@ const RestaurantCard = ({name, avgRating, sla, cuisines, locality, cloudinaryIma
         </div>
         <p className="text-gray-500 px-3">{cuisines.join(", ")}</p>
         <p className="text-gray-500 px-3">{locality}</p>
-    </div>
+    </Link>
   )
 }
 
